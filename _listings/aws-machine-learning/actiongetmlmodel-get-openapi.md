@@ -1,9 +1,12 @@
+---
 swagger: "2.0"
 x-collection-name: AWS Machine Learning
-x-complete: 1
+x-complete: 0
 info:
-  title: AWS Machine Learning API
+  title: AWS Machine Learning API Get M L Model
   version: 1.0.0
+  description: Returns an MLModel that includes detailed metadata, data source information,
+    and the current status of the MLModel.
 schemes:
 - http
 produces:
@@ -217,55 +220,17 @@ paths:
       tags:
       - Machine Learning
       - Models
-  /?Action=Predict:
-    get:
-      summary: Predict
-      description: Generates a prediction for the observation using the specified
-        ML Model.
-      operationId: predict
-      x-api-path-slug: actionpredict-get
-      parameters:
-      - in: query
-        name: MLModelId
-        description: A unique identifier of the MLModel
-        type: string
-      - in: query
-        name: PredictEndpoint
-        description: 'Type: String'
-        type: string
-      - in: query
-        name: Record
-        description: A map of variable name-value pairs that represent an observation
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Machine Learning
-      - Predict
-  /?Action=UpdateMLModel:
-    get:
-      summary: Update M L Model
-      description: Updates the MLModelName and the ScoreThreshold of an MLModel.
-      operationId: updateMLModel
-      x-api-path-slug: actionupdatemlmodel-get
-      parameters:
-      - in: query
-        name: MLModelId
-        description: The ID assigned to the MLModel during creation
-        type: string
-      - in: query
-        name: MLModelName
-        description: A user-supplied name or description of the MLModel
-        type: string
-      - in: query
-        name: ScoreThreshold
-        description: The ScoreThreshold used in binary classification MLModel that
-          marks the boundary between a positive prediction and a negative prediction
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Machine Learning
-      - Models
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---

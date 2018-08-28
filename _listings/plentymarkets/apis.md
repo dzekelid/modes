@@ -11,11 +11,24 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "7"
 x-alexaRank: ""
 tags: Modes
-created: "2018-08-26"
-modified: "2018-08-26"
+created: "2018-08-28"
+modified: "2018-08-28"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/modes/master/_listings/plentymarkets/apis.md
 specificationVersion: "0.14"
 apis:
+- name: plentymarkets REST-API - Lists the debtor accounts by mode.
+  x-api-slug: restaccountinglocationslocationiddebtor-accountsmode-get
+  description: Lists the debtor accounts of an accounting location by mode. The ID
+    of the accounting location and the mode have to be specified.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/plentymarkets.png
+  humanURL: http://www.plentymarkets.co.uk
+  baseURL: https://example.com//
+  tags: ERP, Service API, Relative Data
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/modes/master/_listings/plentymarkets/restaccountinglocationslocationiddebtor-accountsmode-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/modes/master/_listings/plentymarkets/restaccountinglocationslocationiddebtor-accountsmode-get-openapi.md
 - name: plentymarkets REST-API - Lists the debtor accounts by mode.
   x-api-slug: restaccountinglocationslocationiddebtor-accountsmode-get
   description: Lists the debtor accounts of an accounting location by mode. The ID

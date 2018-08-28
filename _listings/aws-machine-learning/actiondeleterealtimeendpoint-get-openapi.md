@@ -3,9 +3,9 @@ swagger: "2.0"
 x-collection-name: AWS Machine Learning
 x-complete: 0
 info:
-  title: AWS Machine Learning API Predict
+  title: AWS Machine Learning API Delete Realtime Endpoint
   version: 1.0.0
-  description: Generates a prediction for the observation using the specified ML Model.
+  description: Deletes a real time endpoint of an MLModel.
 schemes:
 - http
 produces:
@@ -137,114 +137,6 @@ paths:
       tags:
       - Machine Learning
       - Real Time
-  /?Action=DescribeMLModels:
-    get:
-      summary: Describe M L Models
-      description: Returns a list of MLModel that match the search criteria in the
-        request.
-      operationId: describeMLModels
-      x-api-path-slug: actiondescribemlmodels-get
-      parameters:
-      - in: query
-        name: EQ
-        description: The equal to operator
-        type: string
-      - in: query
-        name: FilterVariable
-        description: 'Use one of the following variables to filter a list of MLModel:'
-        type: string
-      - in: query
-        name: GE
-        description: The greater than or equal to operator
-        type: string
-      - in: query
-        name: GT
-        description: The greater than operator
-        type: string
-      - in: query
-        name: LE
-        description: The less than or equal to operator
-        type: string
-      - in: query
-        name: Limit
-        description: The number of pages of information to include in the result
-        type: string
-      - in: query
-        name: LT
-        description: The less than operator
-        type: string
-      - in: query
-        name: NE
-        description: The not equal to operator
-        type: string
-      - in: query
-        name: NextToken
-        description: The ID of the page in the paginated results
-        type: string
-      - in: query
-        name: Prefix
-        description: A string that is found at the beginning of a variable, such as
-          Name or Id
-        type: string
-      - in: query
-        name: SortOrder
-        description: A two-value parameter that determines the sequence of the resulting
-          list of MLModel
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Machine Learning
-      - Models
-  /?Action=GetMLModel:
-    get:
-      summary: Get M L Model
-      description: Returns an MLModel that includes detailed metadata, data source
-        information, and the current status of the MLModel.
-      operationId: getMLModel
-      x-api-path-slug: actiongetmlmodel-get
-      parameters:
-      - in: query
-        name: MLModelId
-        description: The ID assigned to the MLModel at creation
-        type: string
-      - in: query
-        name: Verbose
-        description: Specifies whether the GetMLModel operation should return Recipe
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Machine Learning
-      - Models
-  /?Action=Predict:
-    get:
-      summary: Predict
-      description: Generates a prediction for the observation using the specified
-        ML Model.
-      operationId: predict
-      x-api-path-slug: actionpredict-get
-      parameters:
-      - in: query
-        name: MLModelId
-        description: A unique identifier of the MLModel
-        type: string
-      - in: query
-        name: PredictEndpoint
-        description: 'Type: String'
-        type: string
-      - in: query
-        name: Record
-        description: A map of variable name-value pairs that represent an observation
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Machine Learning
-      - Predict
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

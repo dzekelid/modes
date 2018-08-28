@@ -1,9 +1,11 @@
+---
 swagger: "2.0"
 x-collection-name: AWS Machine Learning
-x-complete: 1
+x-complete: 0
 info:
-  title: AWS Machine Learning API
+  title: AWS Machine Learning API Describe M L Models
   version: 1.0.0
+  description: Returns a list of MLModel that match the search criteria in the request.
 schemes:
 - http
 produces:
@@ -195,77 +197,17 @@ paths:
       tags:
       - Machine Learning
       - Models
-  /?Action=GetMLModel:
-    get:
-      summary: Get M L Model
-      description: Returns an MLModel that includes detailed metadata, data source
-        information, and the current status of the MLModel.
-      operationId: getMLModel
-      x-api-path-slug: actiongetmlmodel-get
-      parameters:
-      - in: query
-        name: MLModelId
-        description: The ID assigned to the MLModel at creation
-        type: string
-      - in: query
-        name: Verbose
-        description: Specifies whether the GetMLModel operation should return Recipe
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Machine Learning
-      - Models
-  /?Action=Predict:
-    get:
-      summary: Predict
-      description: Generates a prediction for the observation using the specified
-        ML Model.
-      operationId: predict
-      x-api-path-slug: actionpredict-get
-      parameters:
-      - in: query
-        name: MLModelId
-        description: A unique identifier of the MLModel
-        type: string
-      - in: query
-        name: PredictEndpoint
-        description: 'Type: String'
-        type: string
-      - in: query
-        name: Record
-        description: A map of variable name-value pairs that represent an observation
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Machine Learning
-      - Predict
-  /?Action=UpdateMLModel:
-    get:
-      summary: Update M L Model
-      description: Updates the MLModelName and the ScoreThreshold of an MLModel.
-      operationId: updateMLModel
-      x-api-path-slug: actionupdatemlmodel-get
-      parameters:
-      - in: query
-        name: MLModelId
-        description: The ID assigned to the MLModel during creation
-        type: string
-      - in: query
-        name: MLModelName
-        description: A user-supplied name or description of the MLModel
-        type: string
-      - in: query
-        name: ScoreThreshold
-        description: The ScoreThreshold used in binary classification MLModel that
-          marks the boundary between a positive prediction and a negative prediction
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Machine Learning
-      - Models
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
